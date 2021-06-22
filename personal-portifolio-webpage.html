@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Personal Portfolio Webpage</title>
+	
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+	
+	<style>
+		* { margin: 0; padding: 0; }
+		body { color: #2f2a1a; font-size: 1.8rem; font-weight: 400; line-height: 1.4; }
+		
+		ul { list-style: none; }
+		a { text-decoration: none; }
+		.external-links-container { display: flex; justify-content: space-around; }
+		
+		h1, h2, h3, p { padding: 10px; }
+		
+		header, main {  background-color: #78878cd4; /*#f7622b; rgb(152 42 42 / 30%);*/ }
+		
+		nav#navbar { position: fixed; display: flex; justify-content: flex-end; color: #ffffffc7; /*#2f2a1a; #2f0e02; #441504; #9c320a; #f7622b;*/ background-color: #78878c; width: 100%; }
+		nav#navbar p { padding-right: 40px; }
+		nav#navbar a { color: inherit; }
+		
+		main #welcome-section { /*clear: both;*/ display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100vh; text-align: center;
+		background-image: linear-gradient(#c1b9b1, aliceblue, #b99a7b); /*linear-gradient(linen, aliceblue, linen);*/ color: #2f2a1a; }
+		main #welcome-section h1 { font-size: 2em; }
+		main #welcome-section p { font-size: 1.4em; }
+		
+		main section#projects { color: #ffffffc7; padding: 5rem 4rem;}
+		main section#projects .projects-container-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); grid-gap: 4rem; width: 100%; }
+		main section#projects .projects { margin-bottom: 30px; }
+		main section#projects h2 { color: #ad6419; text-align: center; }
+		main section#projects h3 { color: #ffebaa; margin-bottom: 20px; }
+		main section#projects a { color: #6f2913; /*justify-self: center;*/ background-color: #b99a7b33; text-align: center; text-shadow: 0.5px 0.5px #ffebaa; border-radius: 8px 8px 0 0; /*border: 0.5px solid #ffebaa;*/ }
+		main section#projects img.project-icon { /*max-width: 500px;*/ width: 100%; height: calc(100% - 6.8rem); border-radius: 8px 8px 0 0; }
+		
+		main section#contact { color: black; background-color: #f7622b; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; height: 100vh; text-align: center; }
+		main section#contact h2 { font-size: 1.9em; }
+		main section#contact .contact-links { display: flex; flex-direction: column;  width: 100%; }
+		main section#contact .contact-links a { color: #f3eacdc7; font-size: 1.8rem; font-weight: 800; padding: 5px; }
+		
+		footer { color: black; background-color: #589a58; font-size: 1rem; padding: 10px; }
+		footer p { color: #f3eacdc7; font-weight: 800; text-align: end; font-size: 1.2rem; margin-bottom: 15px; }
+		footer a { color: inherit; }
+		
+		
+		/*MEDIA QUERY*/
+		@media only screen and (min-width: 840px) {
+			main section#contact .contact-links {
+				flex-direction: row;
+				justify-content: space-evenly; align-items: baseline;
+			}
+		}
+	</style>
+	
+</head>
+<body>
+
+	<header>
+		<!--<ul class="external-links-container">
+			<li><a target="_blank" href="https://musica-erudita.netlify.app/">A Música Erudita</a>
+			</li>
+			<li><a target="_blank" href="https://musica-erudita.netlify.app/coral-historico.html">Pequeno Histórico da Música Erudita</a> </li>
+			<li><a target="blank" href="https://musica-erudita.netlify.app/coral-mundo.html">A Música Erudita no Mundo</a></li>
+			<li><a target="_blank" href="https://musica-erudita.netlify.app/coral-brasil.html">A Música Erudita no Brasil</a></li>
+			<li><a target="_blank" href="https://musica-erudita.netlify.app/coral-historico-vozes.html">As Vozes no Coral Sinfônico</a></li>
+		</ul>	-->
+		
+		<nav id="navbar">
+			<p><a href="#welcome-section">About</a></p>
+			<p><a href="#projects">Work</a></p>
+			<p><a href="#contact">Contacts</a></p>
+		</nav>
+	</header>
+
+	<main>
+		<section id="welcome-section" aria-label="Welcome">
+			<h1>Ahoooy, there! My name is Marcus Richa</h1>
+			<p>Welcome to my Portfolio Webpage.</p>
+		</section>
+		
+		<section id="projects" aria-label="Web Development Projects">
+			<h2>These are some of my projects</h2>
+			
+			<div class="projects frontend-section" aria-label="Frontend projects">
+				<h3>Frontend projects</h3>
+				<div class="projects-container-grid">
+					<!--calculator-icon-squared.png-->
+					<!--calculator-icon.png-->
+					<a target="_blank" href="https://codepen.io/ahoymarcus/pen/PopNrRB?editors=0010" class="project-tile"><img class="project-icon" src="images/calculator-icon-squared.png" alt="Projetos" /><p><span>React-JS Calculator</span></p></a>
+					<a target="_blank" href="https://codepen.io/ahoymarcus/pen/OJpNWZr" class="project-tile"><img class="project-icon" src="images/markdown-previewer-icon.png" alt="Projetos" /><p><span>React-JS Markdown Prviewer</span></p></a>
+					<a target="_blank" href="https://codepen.io/ahoymarcus/pen/XWMXqRE" class="project-tile"><img class="project-icon" src="images/quotes-machine-icon.png" alt="Projetos" /><p><span>React-JS Random Quote Machine</span></p></a>
+					<!--<a target="_blank" href="" class="project-tile"><img class="project-icon" src="images/" alt="Projetos" /><p><span>React-JS 25 + 5 Clock</span></p></a>-->
+					<a target="_blank" href="https://github.com/ahoymarcus/covid19-reactapp" class="project-tile"><img class="project-icon" src="images/covid-app-icon.png" alt="Projetos" /><p><span>Covid19 App</span></p></a>
+					<a target="_blank" href="https://api-criptomoedas-javascript.netlify.app/" class="project-tile"><img class="project-icon" src="images/cripocoins-icon.png" alt="Projetos" /><p><span>API CriptoCoins</span></p></a>
+					<a target="_blank" href="https://ahoymarcus-musicpad-app.netlify.app/" class="project-tile"><img class="project-icon" src="images/music-pad-icon.png" alt="Projetos" /><p><span>Musicpad Interface</span></p></a>
+				</div>
+			</div>
+					
+			<div class="projects web-design-section" aria-label="Web design projects">
+				<h3>Web design projects</h3>
+				<div class="projects-container-grid">
+					<a target="_blank" href="https://musica-erudita.netlify.app/" class="project-tile"><img class="project-icon" src="images/mus-erudita-icon.png" alt="Projetos" /><p><span>Musica Erudita</span></p></a>
+					<a target="_blank" href="https://tribute-page-bach-freecodecamp.netlify.app/" class="project-tile"><img class="project-icon" src="images/tribure-page-icon.png" alt="Projetos" /><p><span>Tribure Page</span></p></a>
+					<a target="_blank" href="https://buil-a-survey-form-freecodecamp.netlify.app/" class="project-tile"><img class="project-icon" src="images/form-page-icon.png" alt="Projetos" /><p><span>Survey Form</span></p></a>
+					<a target="_blank" href="https://product-landing-page-freecodecamp-org.netlify.app/" class="project-tile"><img class="project-icon" src="images/product-page-icon.png" alt="Projetos" /><p><span>Product Landing Page</span></p></a>
+					<a target="_blank" href="ttps://technical-mongodb-mockup-doc-page-freecodecamp.netlify.app/" class="project-tile"><img class="project-icon" src="images/technical-page-icon.png" alt="Projetos" /><p><span>Technical Documentation Page</span></p></a>
+					<a target="_blank" href="https://flexbox-instagram-com-dio.netlify.app/" class="project-tile"><img class="project-icon" src="images/clone-instagram-icon.png" alt="Projetos" /><p><span>Clone Instagram</span></p></a>
+					<a target="_blank" href="https://clone-netflix-com-dio.netlify.app/" class="project-tile"><img class="project-icon" src="images/clone-netflix-icon.png" alt="Projetos" /><p><span>Clone NetFlix</span></p></a>
+					<a target="_blank" href="https://jogo-da-cobrinha-javascript.netlify.app/" class="project-tile"><img class="project-icon" src="images/snake-game-icon.png" alt="Projetos" /><p><span>Jogo da Cobrinha</span></p></a>
+					<a target="_blank" href="https://css3-com-grid-system-transform-property.netlify.com/coro-galeria-de-imagens.html" class="project-tile"><img class="project-icon" src="images/galeriaimgs-icon.png" alt="Projetos" /><p><span>Galeria de Imagens</span></p></a>
+				</div>
+			</div>
+			
+			<div class="projects backend-section" aria-lable="Backend projects">
+				<h3>Backend projects</h3>
+				<div class="projects-container-grid">
+					<a target="_blank" href="https://github.com/ahoymarcus/musica-erudita-api-node" class="project-tile"><img class="project-icon" src="images/music-db-icon.png" alt="Projetos" /><p><span>Music Database</span></p></a>
+					<a target="_blank" href="https://github.com/ahoymarcus/meadowlarkapp-javascript-stack.git" class="project-tile"><img class="project-icon" src="images/database-node-icon.png" alt="Projetos" /><p><span>Data Base com NodeJS</span></p></a>
+					<a target="_blank" href="https://restful-mvc-pug-sqlite.herokuapp.com/" class="project-tile"><img class="project-icon" src="images/node-express-icon.png" alt="Projetos" /><p><span>Node e Express-JS</span></p></a>
+				</div>
+			</div> 
+			
+		</section>
+		
+		<section id="contact" aria-label="Contacts">
+			<div class="contact-header">
+				<h2>Jump on board skipper...</h2>
+				<p>How do you take your coffee?</p>
+			</div>
+			<div class="contact-links">
+				<a id="profile-link" target="_blank" href="https://github.com/ahoymarcus"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+				<a id="profile-link" target="_blank" href="https://www.freecodecamp.org/ahoymarcus"><i class="fa fa-free-code-camp" aria-hidden="true"></i>FreeCodeCamp</a>
+				<a id="profile-link" target="_blank" href="https://web.digitalinnovation.one/home"><i class=""></i>Digital Innovation One</a>
+			</div>
+			
+		</section>
+		
+	</main>
+
+
+	<footer>
+		<p>Marcus Vinícius Richa - Frontend Developer</p>
+		
+		<ul class="external-links-container">
+			<li><a target="_blank" href="https://musica-erudita.netlify.app/">A Música Erudita</a> </li>
+			<li><a target="_blank" href="https://musica-erudita.netlify.app/coral-historico.html">Pequeno Histórico da Música Erudita</a> </li>
+			<li><a target="blank" href="https://musica-erudita.netlify.app/coral-mundo.html">A Música Erudita no Mundo</a></li>
+			<li><a target="_blank" href="https://musica-erudita.netlify.app/coral-brasil.html">A Música Erudita no Brasil</a></li>
+			<li><a target="_blank" href="https://musica-erudita.netlify.app/coral-historico-vozes.html">As Vozes no Coral Sinfônico</a></li>
+		</ul>
+		
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
